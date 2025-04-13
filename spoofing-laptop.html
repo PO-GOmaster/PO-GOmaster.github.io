@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spoofing Tutorial - Laptop Method</title>
+  <style>
+    body {
+      background-color: #000;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .container {
+      background: rgba(0, 0, 0, 0.85);
+      padding: 40px;
+      border-radius: 12px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    }
+    h1 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    .price {
+      font-size: 1.5em;
+      color: #ffd700;
+      margin-bottom: 30px;
+    }
+    .paypal-button {
+      margin-bottom: 30px;
+    }
+    .code-box {
+      background: #111;
+      padding: 15px;
+      border-radius: 10px;
+      font-family: monospace;
+      margin-top: 30px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Spoofing Tutorial - Laptop Method</h1>
+    <p>This tutorial teaches you how to spoof Pokémon GO using your laptop. You will need a laptop for this method.</p>
+    <p class="price">£10 / ~$12.50</p>
+
+    <div class="paypal-button">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" onsubmit="generateCode()">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
+        <input type="hidden" name="item_name" value="Spoofing Tutorial - Laptop Method">
+        <input type="hidden" name="amount" value="10.00">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="notify_url" value="https://yoursite.com/handle-payment">
+        <label for="quantity">Quantity:</label>
+        <input type="number" name="quantity" value="1" min="1" required>
+        <br><br>
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+    <div id="codeBox" class="code-box">
+      Your Purchase Code: <span id="purchaseCode"></span>
+    </div>
+  </div>
+
+  <script>
+    function generateCode() {
+      const code = Array.from({length: 18}, () => Math.floor(Math.random() * 10)).join('');
+      document.getElementById("purchaseCode").innerText = code;
+      document.getElementById("codeBox").style.display = 'block';
+      // Optional: send the code via email using server-side script or webhook
+    }
+  </script>
+</body>
+</html>
