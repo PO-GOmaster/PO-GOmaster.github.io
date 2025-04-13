@@ -3,13 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon GO Services</title>
+  <title>Pokémon GO Power Services</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/masters-16.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background: black;
       color: white;
       text-align: center;
     }
@@ -45,15 +44,16 @@
       max-width: 600px;
       border-radius: 12px;
     }
-    .snorlax {
-      width: 100px;
-      height: auto;
-      margin: 20px;
-    }
-    .snorlax-row {
+    .pokemon-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .pokemon-img {
+      width: 100px;
+      height: auto;
     }
   </style>
 </head>
@@ -61,21 +61,39 @@
   <div class="container">
     <h1>Pokémon GO Power Services</h1>
 
-    <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+    <div class="pokemon-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="pokemon-img" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="pokemon-img" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="pokemon-img" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="pokemon-img" alt="Armored Mewtwo">
     </div>
 
     <div class="main-buttons">
-      <button onclick="showSection('boosting')">Boosting</button>
       <button onclick="showSection('spoofing')">Spoofing</button>
+      <button onclick="showSection('boosting')">Boosting</button>
       <button onclick="showSection('accounts')">Accounts</button>
     </div>
+
+    <section id="spoofing">
+      <h2>Spoofing Services</h2>
+      <div class="product">
+        <h3>Spoofing Tutorial - Laptop Method</h3>
+        <p>Includes full step-by-step guide. You will need a laptop.</p>
+        <p>Price: £10</p>
+      </div>
+      <div class="product">
+        <h3>Spoofing Tutorial - Phone Method</h3>
+        <p>May take longer to download. Works on Android devices.</p>
+        <p>Price: £15</p>
+      </div>
+    </section>
 
     <section id="boosting">
       <h2>Boosting Services</h2>
       <div class="product">
-        1 Million Stardust Farming - £6
+        <h3>1 Million Stardust Farming</h3>
+        <p>We will farm 1 million Stardust on your account.</p>
+        <p>Price: £6</p>
         <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
           <input type="hidden" name="cmd" value="_xclick">
           <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
@@ -85,22 +103,12 @@
           <input type="submit" value="Buy Now with PayPal">
         </form>
       </div>
-    </section>
-
-    <section id="spoofing">
-      <h2>Spoofing Services</h2>
-      <div class="product">Spoofing Slot 1</div>
-      <div class="product">Spoofing Slot 2</div>
-      <div class="product">Spoofing Slot 3</div>
-      <div class="product">Spoofing Slot 4</div>
-      <div class="product">Spoofing Slot 5</div>
-      <div class="product">Spoofing Slot 6</div>
-      <div class="product">Spoofing Slot 7</div>
-      <div class="product">Spoofing Slot 8</div>
+      <!-- Additional boosting products can be added here -->
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
+      <!-- Placeholder for account slots -->
       <div class="product">Account Slot 1</div>
       <div class="product">Account Slot 2</div>
       <div class="product">Account Slot 3</div>
@@ -110,11 +118,6 @@
       <div class="product">Account Slot 7</div>
       <div class="product">Account Slot 8</div>
     </section>
-
-    <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-    </div>
   </div>
 
   <script>
