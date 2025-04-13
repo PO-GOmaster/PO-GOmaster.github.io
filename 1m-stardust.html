@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>1 Million Stardust Farming</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #000;
+      color: #fff;
+      text-align: center;
+    }
+    .container {
+      padding: 40px 20px;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .description {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .price {
+      font-size: 1.5em;
+      color: #ffd700;
+      margin-bottom: 30px;
+    }
+    .paypal-button {
+      margin-bottom: 40px;
+    }
+    .code-box {
+      font-family: monospace;
+      background: #222;
+      padding: 15px;
+      border: 1px solid #555;
+      display: inline-block;
+      margin-top: 30px;
+      color: #0f0;
+    }
+    a.back {
+      color: #00f;
+      text-decoration: underline;
+      display: block;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>1 Million Stardust Farming</h1>
+    <div class="description">
+      Farm 1 million Stardust in Pokémon GO. Perfect for powering up your strongest Pokémon or trading. Reliable, fast, and efficient service.
+    </div>
+    <div class="price">Price: £6 (~$7.50 USD)</div>
+
+    <div class="paypal-button">
+      <!-- Replace the form action with your PayPal link -->
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+        <input type="hidden" name="cmd" value="_xclick">
+        <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
+        <input type="hidden" name="item_name" value="1 Million Stardust Farming">
+        <input type="hidden" name="amount" value="6.00">
+        <input type="hidden" name="currency_code" value="GBP">
+        <input type="hidden" name="quantity" value="1">
+        <input type="submit" value="Buy Now with PayPal">
+      </form>
+    </div>
+
+    <div class="code-box">
+      Your purchase code: <br />
+      <strong id="purchase-code">Generating...</strong>
+    </div>
+
+    <a href="../index.html" class="back">← Back to Home</a>
+  </div>
+
+  <script>
+    function generateCode() {
+      const charset = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let code = "";
+      for (let i = 0; i < 18; i++) {
+        const randomIndex = Math.floor(Math.random() * charset.length);
+        code += charset[randomIndex];
+      }
+      return code;
+    }
+
+    const code = generateCode();
+    document.getElementById("purchase-code").innerText = code;
+
+    // You'd use backend/email service in real setup
+    console.log("Send this code to your email:", code);
+  </script>
+</body>
+</html>
