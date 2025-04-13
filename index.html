@@ -43,21 +43,25 @@
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
+      border: 2px solid gold;
     }
     .product a {
-      color: gold;
+      color: #00ffff;
       text-decoration: none;
+    }
+    .product a:hover {
+      text-decoration: underline;
     }
     .pokemon-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      margin-bottom: 30px;
+      gap: 10px;
+      margin: 20px 0;
     }
     .pokemon-row img {
       width: 120px;
       height: auto;
-      margin: 10px;
     }
   </style>
 </head>
@@ -81,35 +85,40 @@
     <section id="spoofing">
       <h2>Spoofing Services</h2>
       <div class="product">
-        <h3>Laptop Method Spoofing Tutorial - £10 / $12.50</h3>
-        <p>Includes full step-by-step instructions. You will need a laptop.</p>
-        <a href="thankyou.html" onclick="storeProduct('Laptop Method Spoofing Tutorial - £10 / $12.50')">Buy Now</a>
+        <strong>Spoofing Tutorial - Laptop Method</strong><br>
+        You'll need a laptop to complete this tutorial.<br>
+        Price: £10 (~$13)
       </div>
       <div class="product">
-        <h3>Phone Method Spoofing Tutorial - £15 / $18.75</h3>
-        <p>May take longer to download depending on device and version.</p>
-        <a href="thankyou.html" onclick="storeProduct('Phone Method Spoofing Tutorial - £15 / $18.75')">Buy Now</a>
+        <strong>Spoofing Tutorial - Phone Method</strong><br>
+        May take longer to download.<br>
+        Price: £15 (~$19)
       </div>
     </section>
 
     <section id="boosting">
       <h2>Boosting Services</h2>
-      <div class="product">
-        <h3>1 Million Stardust Farming - £6 / $7.50</h3>
-        <p>We will farm 1 million stardust on your account quickly and safely.</p>
-        <a href="thankyou.html" onclick="storeProduct('1 Million Stardust Farming - £6 / $7.50')">Buy Now</a>
-      </div>
-      <!-- Add 7 more boosting products here as needed -->
+      <div class="product">1 Million Stardust Farming - £6 (~$8)</div>
+      <div class="product">Shiny Catches - £1 Each (~$1.25)</div>
+      <div class="product">Hundo Catches - £1.50 Each (~$2)</div>
+      <div class="product">Shundo Catches - £4 Each (~$5)</div>
+      <div class="product">Shiny Legendary Trades - £10 Each (~$13)</div>
+      <div class="product">Lvl 50 Legendary Trades - £8 Each (~$10)</div>
+      <div class="product">40x Raids - £20 (~$25)</div>
+      <div class="product">10 Million XP + Shiny/Hundo Catches - £12 (~$15)</div>
     </section>
 
     <section id="accounts">
-      <h2>Accounts for Sale</h2>
-      <div class="product">
-        <h3>£5 Mystery Account - Level 30+</h3>
-        <p>200k+ Stardust, 2+ Shinies, 4+ Legendaries</p>
-        <a href="thankyou.html" onclick="storeProduct('£5 Mystery Account - Level 30+')">Buy Now</a>
-      </div>
-      <!-- Add other 7 accounts similarly -->
+      <h2>Mystery Accounts for Sale</h2>
+      <div class="product">£5 - Level 30+ | 200k+ Stardust | 2+ Shinies | 4+ Legendaries</div>
+      <div class="product">£10 - Level 40 | 400k+ Stardust | 10+ Shinies | 10+ Legendaries</div>
+      <div class="product">£20 - Level 40+ | 700k+ Stardust | 20+ Shinies | 30+ Legendaries | 1+ Shiny Legendary</div>
+      <div class="product">£40 - Level 42+ | 3M+ Stardust | 60+ Shinies | 80+ Legendaries | 4+ Shiny Legendaries | 1+ Shundo</div>
+      <div class="product">£70 - Level 45+ | 5M+ Stardust | 130+ Shinies | 160+ Legendaries | 10 Shiny Legendaries | 1 Shundo Legendary or Pseudo | 5+ Shundos</div>
+      <div class="product">£110 - Level 48+ | 8M+ Stardust | 300+ Shinies | 230+ Legendaries | 15+ Shiny Legendaries | 2+ Shundo Legendary or Pseudo | 8+ Shundos</div>
+      <div class="product">£140 - Level 48+ | 10M+ Stardust | 350+ Shinies | 300+ Legendaries | 20+ Shiny Legendaries | 2+ Shundo Legendary | 10+ Shundos | Chance for Armored Mewtwo</div>
+      <div class="product">£200 - Level 50 | 15M+ Stardust | 500+ Shinies | 400+ Legendaries | 30+ Shiny Legendaries | 3+ Shundo Legendary | 15+ Shundos | Armored Mewtwo</div>
+      <div class="product">£400 - Level 50+ | 100M+ XP | 1000+ Shinies | 700+ Legendaries | 40+ Shiny Legendaries | 8+ Shundo Legendary | 20+ Shundos | Armored Mewtwo + Apex Ho-Oh | 40M+ Stardust</div>
     </section>
   </div>
 
@@ -119,10 +128,6 @@
         section.style.display = 'none';
       });
       document.getElementById(sectionId).style.display = 'block';
-    }
-
-    function storeProduct(productName) {
-      localStorage.setItem('productName', productName);
     }
   </script>
 </body>
