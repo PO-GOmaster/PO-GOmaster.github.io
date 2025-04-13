@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon GO Services</title>
+  <title>Pokémon GO Power Services</title>
   <style>
     body {
       margin: 0;
@@ -38,25 +38,23 @@
       margin-top: 40px;
     }
     .product {
-      background: rgba(255, 255, 255, 0.1);
+      background: rgba(0,0,0,0.7);
       margin: 10px auto;
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
       cursor: pointer;
+      border: 2px solid gold;
     }
-    .product:hover {
-      background: rgba(255, 255, 255, 0.2);
+    .snorlax, .kyogre, .groudon, .mewtwo {
+      width: 100px;
+      height: auto;
+      margin: 20px;
     }
-    .pokemon-banner {
+    .snorlax-row {
       display: flex;
       justify-content: center;
-      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 20px;
-    }
-    .pokemon-banner img {
-      height: 100px;
     }
   </style>
 </head>
@@ -64,11 +62,11 @@
   <div class="container">
     <h1>Pokémon GO Power Services</h1>
 
-    <div class="pokemon-banner">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" alt="Armored Mewtwo">
+    <div class="snorlax-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="kyogre" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="groudon" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="mewtwo" alt="Armored Mewtwo">
     </div>
 
     <div class="main-buttons">
@@ -79,34 +77,41 @@
 
     <section id="spoofing">
       <h2>Spoofing Services</h2>
-      <div class="product" onclick="location.href='spoofing-laptop.html'">Laptop Method - £10</div>
-      <div class="product" onclick="location.href='spoofing-phone.html'">Phone Method - £15</div>
+      <div class="product" onclick="window.location.href='products/spoofing-laptop.html'">Laptop Method Tutorial - £10</div>
+      <div class="product" onclick="window.location.href='products/spoofing-phone.html'">Phone Method Tutorial - £15</div>
     </section>
 
     <section id="boosting">
       <h2>Boosting Services</h2>
-      <div class="product" onclick="location.href='boosting-stardust.html'">1 Million Stardust - £6</div>
-      <div class="product" onclick="location.href='boosting-shiny.html'">Shiny Catch - £1</div>
-      <div class="product" onclick="location.href='boosting-hundo.html'">Hundo Catch - £1.50</div>
-      <div class="product" onclick="location.href='boosting-shundo.html'">Shundo Catch - £4</div>
-      <div class="product" onclick="location.href='boosting-shinytrade.html'">Shiny Legendary Trade - £10</div>
-      <div class="product" onclick="location.href='boosting-lvl50trade.html'">Level 50 Legendary Trade - £8</div>
-      <div class="product" onclick="location.href='boosting-raids.html'">40x Raids - £20</div>
-      <div class="product" onclick="location.href='boosting-xp.html'">10M XP + Shinies & Hundos - £12</div>
+      <div class="product" onclick="window.location.href='products/1m-stardust.html'">1 Million Stardust - £6</div>
+      <div class="product" onclick="window.location.href='products/shiny-catches.html'">Shiny Catches - £1</div>
+      <div class="product" onclick="window.location.href='products/hundo-catches.html'">Hundo Catches - £1.50</div>
+      <div class="product" onclick="window.location.href='products/shundo-catches.html'">Shundo Catches - £4</div>
+      <div class="product" onclick="window.location.href='products/shiny-trades.html'">Shiny Legendary Trades - £10</div>
+      <div class="product" onclick="window.location.href='products/legendary-trades.html'">Lvl 50 Legendary Trades - £8</div>
+      <div class="product" onclick="window.location.href='products/40-raids.html'">40x Raids - £20</div>
+      <div class="product" onclick="window.location.href='products/10m-xp.html'">10 Million XP + Shiny/Hundo Boost - £12</div>
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
-      <div class="product" onclick="location.href='account-5.html'">£5 Mystery Account</div>
-      <div class="product" onclick="location.href='account-10.html'">£10 Mystery Account</div>
-      <div class="product" onclick="location.href='account-20.html'">£20 Mystery Account</div>
-      <div class="product" onclick="location.href='account-40.html'">£40 Mystery Account</div>
-      <div class="product" onclick="location.href='account-70.html'">£70 Mystery Account</div>
-      <div class="product" onclick="location.href='account-110.html'">£110 Mystery Account</div>
-      <div class="product" onclick="location.href='account-140.html'">£140 Mystery Account</div>
-      <div class="product" onclick="location.href='account-200.html'">£200 Mystery Account</div>
-      <div class="product" onclick="location.href='account-400.html'">£400 Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-5.html'">£5 Level 30+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-10.html'">£10 Level 40+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-20.html'">£20 Level 40+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-40.html'">£40 Level 42+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-70.html'">£70 Level 45+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-110.html'">£110 Level 48+ Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-140.html'">£140 Level 48+ Premium Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-200.html'">£200 Level 50 Premium Mystery Account</div>
+      <div class="product" onclick="window.location.href='products/account-400.html'">£400 Level 50+ Ultimate Account</div>
     </section>
+
+    <div class="snorlax-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="kyogre" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="groudon" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="mewtwo" alt="Armored Mewtwo">
+    </div>
   </div>
 
   <script>
