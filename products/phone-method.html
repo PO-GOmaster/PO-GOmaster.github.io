@@ -2,56 +2,80 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spoofing Tutorial (Phone Method)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spoofing Tutorial - Phone Method</title>
+  <link rel="stylesheet" href="../style.css" />
   <style>
     body {
       background-color: black;
       color: white;
       font-family: Arial, sans-serif;
       text-align: center;
-      padding: 40px;
+      padding: 30px;
     }
-    .product {
-      background-color: rgba(255, 255, 255, 0.1);
+    .container {
+      background-color: #1c1c1c;
+      padding: 30px;
       border-radius: 12px;
-      padding: 20px;
+      max-width: 600px;
+      margin: auto;
+      box-shadow: 0 0 15px red;
+    }
+    .paypal-button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background-color: #0070ba;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    .paypal-button:hover {
+      background-color: #005ea6;
+    }
+    #codeBox {
+      margin-top: 20px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #00ffcc;
+    }
+    a {
+      color: #00ccff;
       display: inline-block;
       margin-top: 20px;
+      text-decoration: none;
     }
-    button {
-      padding: 10px 20px;
-      font-size: 16px;
-      background-color: gold;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
-  <h1>Spoofing Tutorial (Phone Method)</h1>
-  <div class="product">
-    <p>Price: £15 (~$18.75 USD)</p>
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+  <div class="container">
+    <h1>Spoofing Tutorial - Phone Method</h1>
+    <p>This tutorial guides you through spoofing Pokémon GO using your phone (Android/iOS).</p>
+    <p><strong>Price:</strong> £15 (~$18.75)</p>
+    <p><strong>Note:</strong> This method may take longer to download and install.</p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" onsubmit="generateCode()">
       <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
-      <input type="hidden" name="item_name" value="Spoofing Tutorial (Phone Method)">
-      <input type="hidden" name="amount" value="15">
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+      <input type="hidden" name="item_name" value="Spoofing Tutorial - Phone Method">
       <input type="hidden" name="currency_code" value="GBP">
-      <label for="quantity">Quantity:</label>
-      <input type="number" name="quantity" value="1" min="1">
-      <br><br>
-      <button type="submit">Buy with PayPal</button>
+      <input type="hidden" name="amount" value="15.00">
+      <input type="submit" value="Buy Now with PayPal" class="paypal-button">
     </form>
-    <p id="codeDisplay"></p>
+
+    <div id="codeBox"></div>
+    <a href="../index.html">← Back to Home</a>
   </div>
+
   <script>
     function generateCode() {
-      return Math.floor(100000000000000000 + Math.random() * 900000000000000000);
+      const code = Array.from({ length: 18 }, () => Math.floor(Math.random() * 10)).join('');
+      localStorage.setItem("purchaseCode", code);
     }
-    const code = generateCode();
-    document.getElementById("codeDisplay").innerText = "Your code: " + code;
   </script>
 </body>
 </html>
