@@ -54,4 +54,28 @@
 <body>
   <div class="container">
     <h1>Spoofing Tutorial - Laptop Method</h1>
-    <p>This tutorial teaches
+    <p>This tutorial teaches you how to spoof in Pokémon GO using your laptop.</p>
+    <p><strong>Price:</strong> £10 (~$12.50)</p>
+    <p><strong>Requirements:</strong> You will need a laptop for this method.</p>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" onsubmit="generateCode()">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="YOUR_PAYPAL_EMAIL@example.com">
+      <input type="hidden" name="item_name" value="Spoofing Tutorial - Laptop Method">
+      <input type="hidden" name="currency_code" value="GBP">
+      <input type="hidden" name="amount" value="10.00">
+      <input type="submit" value="Buy Now with PayPal" class="paypal-button">
+    </form>
+
+    <div id="codeBox"></div>
+    <a href="../index.html">← Back to Home</a>
+  </div>
+
+  <script>
+    function generateCode() {
+      const code = Array.from({ length: 18 }, () => Math.floor(Math.random() * 10)).join('');
+      localStorage.setItem("purchaseCode", code);
+    }
+  </script>
+</body>
+</html>
