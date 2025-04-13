@@ -8,7 +8,8 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: black;
+      background: url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/masters-16.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
     }
@@ -38,16 +39,11 @@
       margin-top: 40px;
     }
     .product {
-      background: rgba(255,255,255,0.1);
+      background: rgba(0,0,0,0.7);
       margin: 10px auto;
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
-      cursor: pointer;
-      transition: background 0.2s;
-    }
-    .product:hover {
-      background: rgba(255,255,255,0.2);
     }
     .snorlax {
       width: 100px;
@@ -66,52 +62,58 @@
     <h1>Pokémon GO Power Services</h1>
 
     <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="snorlax" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="snorlax" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="snorlax" alt="Armored Mewtwo">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
     </div>
 
     <div class="main-buttons">
-      <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('boosting')">Boosting</button>
+      <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('accounts')">Accounts</button>
     </div>
 
-    <section id="spoofing">
-      <h2>Spoofing Services</h2>
-      <div class="product" onclick="goToProduct('spoofing-laptop')">Laptop Method - £10</div>
-      <div class="product" onclick="goToProduct('spoofing-phone')">Phone Method - £15</div>
-    </section>
-
     <section id="boosting">
       <h2>Boosting Services</h2>
-      <div class="product" onclick="goToProduct('stardust')">1 Million Stardust - £6</div>
-      <div class="product" onclick="goToProduct('shiny-catch')">Shiny Catches - £1 each</div>
-      <div class="product" onclick="goToProduct('hundo-catch')">Hundo Catches - £1.50 each</div>
-      <div class="product" onclick="goToProduct('shundo-catch')">Shundo Catches - £4 each</div>
-      <div class="product" onclick="goToProduct('shiny-trade')">Shiny Legendary Trades - £10 each</div>
-      <div class="product" onclick="goToProduct('legend-trade')">Level 50 Legendary Trades - £8 each</div>
-      <div class="product" onclick="goToProduct('raids')">40x Raids - £20</div>
-      <div class="product" onclick="goToProduct('10m-xp')">10M XP w/ Shinies & Hundos - £12</div>
+      <div class="product">
+        1 Million Stardust Farming - £6
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick">
+          <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
+          <input type="hidden" name="item_name" value="1 Million Stardust Farming">
+          <input type="hidden" name="amount" value="6.00">
+          <input type="hidden" name="currency_code" value="GBP">
+          <input type="submit" value="Buy Now with PayPal">
+        </form>
+      </div>
+    </section>
+
+    <section id="spoofing">
+      <h2>Spoofing Services</h2>
+      <div class="product">Spoofing Slot 1</div>
+      <div class="product">Spoofing Slot 2</div>
+      <div class="product">Spoofing Slot 3</div>
+      <div class="product">Spoofing Slot 4</div>
+      <div class="product">Spoofing Slot 5</div>
+      <div class="product">Spoofing Slot 6</div>
+      <div class="product">Spoofing Slot 7</div>
+      <div class="product">Spoofing Slot 8</div>
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
-      <div class="product" onclick="goToProduct('acc-5')">£5 Mystery Account - Lv30</div>
-      <div class="product" onclick="goToProduct('acc-10')">£10 Mystery Account - Lv40</div>
-      <div class="product" onclick="goToProduct('acc-20')">£20 Mystery Account - Lv40+</div>
-      <div class="product" onclick="goToProduct('acc-40')">£40 Mystery Account - Lv42+</div>
-      <div class="product" onclick="goToProduct('acc-70')">£70 Mystery Account - Lv45+</div>
-      <div class="product" onclick="goToProduct('acc-110')">£110 Mystery Account - Lv48+</div>
-      <div class="product" onclick="goToProduct('acc-140')">£140 Mystery Account - Lv48+</div>
-      <div class="product" onclick="goToProduct('acc-200')">£200 Mystery Account - Lv50</div>
-      <div class="product" onclick="goToProduct('acc-400')">£400 Ultimate Account - Lv50+</div>
+      <div class="product">Account Slot 1</div>
+      <div class="product">Account Slot 2</div>
+      <div class="product">Account Slot 3</div>
+      <div class="product">Account Slot 4</div>
+      <div class="product">Account Slot 5</div>
+      <div class="product">Account Slot 6</div>
+      <div class="product">Account Slot 7</div>
+      <div class="product">Account Slot 8</div>
     </section>
 
     <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="snorlax" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="snorlax" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="snorlax" alt="Armored Mewtwo">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
     </div>
   </div>
 
@@ -121,10 +123,6 @@
         section.style.display = 'none';
       });
       document.getElementById(sectionId).style.display = 'block';
-    }
-
-    function goToProduct(productId) {
-      window.location.href = `products/${productId}.html`;
     }
   </script>
 </body>
