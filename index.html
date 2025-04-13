@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon GO Services</title>
+  <title>Pokémon GO Power Services</title>
   <style>
     body {
       margin: 0;
@@ -19,6 +19,7 @@
     h1 {
       font-size: 3em;
       margin-bottom: 30px;
+      text-shadow: 2px 2px 5px black;
     }
     .main-buttons button {
       font-size: 1.5em;
@@ -30,6 +31,7 @@
       border-radius: 10px;
       cursor: pointer;
       transition: transform 0.2s;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     }
     .main-buttons button:hover {
       transform: scale(1.1);
@@ -44,11 +46,15 @@
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
+      font-size: 1.2em;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
     }
     .product a {
       color: white;
       text-decoration: none;
-      font-weight: bold;
+    }
+    .product a:hover {
+      text-decoration: underline;
     }
     .snorlax {
       width: 100px;
@@ -74,4 +80,52 @@
     <div class="main-buttons">
       <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('boosting')">Boosting</button>
-      <button onclick="showSection
+      <button onclick="showSection('accounts')">Accounts</button>
+    </div>
+
+    <section id="spoofing">
+      <h2>Spoofing Services</h2>
+      <div class="product">Spoofing Slot 1</div>
+      <div class="product">Spoofing Slot 2</div>
+    </section>
+
+    <section id="boosting">
+      <h2>Boosting Services</h2>
+      <div class="product"><a href="boosting-slot-1.html">Boosting Slot 1</a></div>
+      <div class="product">Boosting Slot 2</div>
+      <div class="product">Boosting Slot 3</div>
+      <div class="product">Boosting Slot 4</div>
+      <div class="product">Boosting Slot 5</div>
+      <div class="product">Boosting Slot 6</div>
+      <div class="product">Boosting Slot 7</div>
+      <div class="product">Boosting Slot 8</div>
+    </section>
+
+    <section id="accounts">
+      <h2>Accounts for Sale</h2>
+      <div class="product">Account Slot 1</div>
+      <div class="product">Account Slot 2</div>
+      <div class="product">Account Slot 3</div>
+      <div class="product">Account Slot 4</div>
+      <div class="product">Account Slot 5</div>
+      <div class="product">Account Slot 6</div>
+      <div class="product">Account Slot 7</div>
+      <div class="product">Account Slot 8</div>
+    </section>
+
+    <div class="snorlax-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+    </div>
+  </div>
+
+  <script>
+    function showSection(sectionId) {
+      document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(sectionId).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
