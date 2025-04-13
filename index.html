@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background-color: black;
+      background: black;
       color: white;
       text-align: center;
     }
@@ -41,19 +41,23 @@
       background: rgba(0,0,0,0.7);
       margin: 10px auto;
       padding: 20px;
-      max-width: 700px;
+      max-width: 600px;
       border-radius: 12px;
-      border: 2px solid gold;
     }
-    .snorlax, .extra-pokemon {
-      width: 100px;
-      height: auto;
-      margin: 10px;
+    .product a {
+      color: gold;
+      text-decoration: none;
     }
-    .snorlax-row {
+    .pokemon-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
+      margin-bottom: 30px;
+    }
+    .pokemon-row img {
+      width: 120px;
+      height: auto;
+      margin: 10px;
     }
   </style>
 </head>
@@ -61,56 +65,52 @@
   <div class="container">
     <h1>Pokémon GO Power Services</h1>
 
-    <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="extra-pokemon" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="extra-pokemon" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" class="extra-pokemon" alt="Armored Mewtwo">
+    <div class="pokemon-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" alt="Armored Mewtwo">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" alt="Snorlax">
     </div>
 
     <div class="main-buttons">
-      <button onclick="showSection('boosting')">Boosting</button>
       <button onclick="showSection('spoofing')">Spoofing</button>
+      <button onclick="showSection('boosting')">Boosting</button>
       <button onclick="showSection('accounts')">Accounts</button>
     </div>
 
-    <section id="boosting">
-      <h2>Boosting Services</h2>
-      <div class="product">1 Million Stardust Farming - £6 (~$7.50)</div>
-      <div class="product">Shiny Catches - £1 each (~$1.25)</div>
-      <div class="product">Hundo Catches - £1.50 each (~$1.90)</div>
-      <div class="product">Shundo Catches - £4 each (~$5)</div>
-      <div class="product">Shiny Legendary Trades - £10 each (~$12.50)</div>
-      <div class="product">Lvl 50 Legendary Trades - £8 each (~$10)</div>
-      <div class="product">40x Raids - £20 (~$25)</div>
-      <div class="product">10 Million XP Boost (with Shinies & Hundos) - £12 (~$15)</div>
-    </section>
-
     <section id="spoofing">
       <h2>Spoofing Services</h2>
-      <div class="product">Laptop Method Tutorial - £10 (~$12.50)<br />You will need a laptop.</div>
-      <div class="product">Phone Method Tutorial - £15 (~$18.80)<br />May take longer to download.</div>
+      <div class="product">
+        <h3>Laptop Method Spoofing Tutorial - £10 / $12.50</h3>
+        <p>Includes full step-by-step instructions. You will need a laptop.</p>
+        <a href="thankyou.html" onclick="storeProduct('Laptop Method Spoofing Tutorial - £10 / $12.50')">Buy Now</a>
+      </div>
+      <div class="product">
+        <h3>Phone Method Spoofing Tutorial - £15 / $18.75</h3>
+        <p>May take longer to download depending on device and version.</p>
+        <a href="thankyou.html" onclick="storeProduct('Phone Method Spoofing Tutorial - £15 / $18.75')">Buy Now</a>
+      </div>
+    </section>
+
+    <section id="boosting">
+      <h2>Boosting Services</h2>
+      <div class="product">
+        <h3>1 Million Stardust Farming - £6 / $7.50</h3>
+        <p>We will farm 1 million stardust on your account quickly and safely.</p>
+        <a href="thankyou.html" onclick="storeProduct('1 Million Stardust Farming - £6 / $7.50')">Buy Now</a>
+      </div>
+      <!-- Add 7 more boosting products here as needed -->
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
-      <div class="product">£5 - Level 30 Mystery Account<br />200K+ Stardust, 2+ Shinies, 4+ Legendaries (~$6.25)</div>
-      <div class="product">£10 - Level 40 Mystery Account<br />400K+ Stardust, 10+ Shinies, 10+ Legendaries (~$12.50)</div>
-      <div class="product">£20 - Level 40+ Mystery Account<br />700K+ Stardust, 20+ Shinies, 30+ Legendaries, 1+ Shiny Legendary (~$25)</div>
-      <div class="product">£40 - Level 42+ Mystery Account<br />3M+ Stardust, 60+ Shinies, 80+ Legendaries, 4+ Shiny Legendaries, 1+ Shundo (~$50)</div>
-      <div class="product">£70 - Level 45+ Mystery Account<br />5M+ Stardust, 130+ Shinies, 160+ Legendaries, 10 Shiny Legendaries, 1 Shundo Legendary/Pseudo, 5+ Shundos (~$87)</div>
-      <div class="product">£110 - Level 48+ Mystery Account<br />8M+ Stardust, 300 Shinies, 230+ Legendaries, 15+ Shiny Legendaries, 2+ Shundo Legendary/Pseudo, 8+ Shundos (~$137)</div>
-      <div class="product">£140 - Level 48+ Mystery Account<br />10M+ Stardust, 350+ Shinies, 300+ Legendaries, 20+ Shiny Legendaries, 2+ Shundo Legendaries, 10+ Shundos, Chance for Armored Mewtwo (~$175)</div>
-      <div class="product">£200 - Level 50 Mystery Account<br />15M+ Stardust, 500+ Shinies, 400+ Legendaries, 30+ Shiny Legendaries, 3+ Shundo Legendaries, 15+ Shundos, Includes Armored Mewtwo (~$250)</div>
-      <div class="product">£400 - Level 50+ Endgame Account<br />100M+ XP, 1000+ Shinies, 700+ Legendaries, 40+ Shiny Legendaries, 8+ Shundo Legendaries, 20+ Shundos, Includes Armored Mewtwo & Apex Ho-Oh (~$500)</div>
+      <div class="product">
+        <h3>£5 Mystery Account - Level 30+</h3>
+        <p>200k+ Stardust, 2+ Shinies, 4+ Legendaries</p>
+        <a href="thankyou.html" onclick="storeProduct('£5 Mystery Account - Level 30+')">Buy Now</a>
+      </div>
+      <!-- Add other 7 accounts similarly -->
     </section>
-
-    <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="extra-pokemon" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="extra-pokemon" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" class="extra-pokemon" alt="Armored Mewtwo">
-    </div>
   </div>
 
   <script>
@@ -119,6 +119,10 @@
         section.style.display = 'none';
       });
       document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function storeProduct(productName) {
+      localStorage.setItem('productName', productName);
     }
   </script>
 </body>
