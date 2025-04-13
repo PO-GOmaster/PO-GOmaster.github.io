@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon GO Power Services</title>
+  <title>Pokémon GO Services</title>
   <style>
     body {
       margin: 0;
@@ -38,21 +38,26 @@
       margin-top: 40px;
     }
     .product {
-      background: rgba(0,0,0,0.7);
+      background: rgba(255,255,255,0.1);
       margin: 10px auto;
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.2s;
     }
-    .pokemon-banner {
+    .product:hover {
+      background: rgba(255,255,255,0.2);
+    }
+    .snorlax {
+      width: 100px;
+      height: auto;
+      margin: 20px;
+    }
+    .snorlax-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 20px;
-      margin-bottom: 20px;
-    }
-    .pokemon-banner img {
-      height: 100px;
     }
   </style>
 </head>
@@ -60,10 +65,10 @@
   <div class="container">
     <h1>Pokémon GO Power Services</h1>
 
-    <div class="pokemon-banner">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" alt="Armored Mewtwo">
+    <div class="snorlax-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="snorlax" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="snorlax" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="snorlax" alt="Armored Mewtwo">
     </div>
 
     <div class="main-buttons">
@@ -73,102 +78,41 @@
     </div>
 
     <section id="spoofing">
-      <h2>Spoofing Tutorials</h2>
-      <div class="product">
-        <h3>Spoofing Tutorial: Laptop Method</h3>
-        <p>You will need a laptop to follow this method.</p>
-        <p>£10 / ~$12.50</p>
-      </div>
-      <div class="product">
-        <h3>Spoofing Tutorial: Phone Method</h3>
-        <p>May take longer to download.</p>
-        <p>£15 / ~$19.00</p>
-      </div>
+      <h2>Spoofing Services</h2>
+      <div class="product" onclick="goToProduct('spoofing-laptop')">Laptop Method - £10</div>
+      <div class="product" onclick="goToProduct('spoofing-phone')">Phone Method - £15</div>
     </section>
 
     <section id="boosting">
       <h2>Boosting Services</h2>
-      <div class="product">
-        <h3>1 Million Stardust Farming</h3>
-        <p>Farmed for your account, delivered fast.</p>
-        <p>£6 / ~$7.50</p>
-      </div>
-      <div class="product">
-        <h3>Shiny Catch</h3>
-        <p>Guaranteed shiny Pokémon.</p>
-        <p>£1 each / ~$1.25</p>
-      </div>
-      <div class="product">
-        <h3>Hundo Catch</h3>
-        <p>100 IV Pokémon catch.</p>
-        <p>£1.50 each / ~$1.85</p>
-      </div>
-      <div class="product">
-        <h3>Shundo Catch</h3>
-        <p>Shiny 100 IV Pokémon.</p>
-        <p>£4 each / ~$5.00</p>
-      </div>
-      <div class="product">
-        <h3>Shiny Legendary Trade</h3>
-        <p>Trade shiny legendary Pokémon.</p>
-        <p>£10 / ~$12.50</p>
-      </div>
-      <div class="product">
-        <h3>Level 50 Legendary Trade</h3>
-        <p>Max level legendary trade.</p>
-        <p>£8 / ~$10.00</p>
-      </div>
-      <div class="product">
-        <h3>40x Remote Raids</h3>
-        <p>Join 40 high-tier raids.</p>
-        <p>£20 / ~$25.00</p>
-      </div>
-      <div class="product">
-        <h3>10M XP with Shinies and Hundos</h3>
-        <p>10 million XP including shiny and hundo catches.</p>
-        <p>£12 / ~$15.00</p>
-      </div>
+      <div class="product" onclick="goToProduct('stardust')">1 Million Stardust - £6</div>
+      <div class="product" onclick="goToProduct('shiny-catch')">Shiny Catches - £1 each</div>
+      <div class="product" onclick="goToProduct('hundo-catch')">Hundo Catches - £1.50 each</div>
+      <div class="product" onclick="goToProduct('shundo-catch')">Shundo Catches - £4 each</div>
+      <div class="product" onclick="goToProduct('shiny-trade')">Shiny Legendary Trades - £10 each</div>
+      <div class="product" onclick="goToProduct('legend-trade')">Level 50 Legendary Trades - £8 each</div>
+      <div class="product" onclick="goToProduct('raids')">40x Raids - £20</div>
+      <div class="product" onclick="goToProduct('10m-xp')">10M XP w/ Shinies & Hundos - £12</div>
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
-      <div class="product">
-        <h3>£5 Starter Level 30 Mystery Account</h3>
-        <p>200k+ Stardust, 2+ Shinies, 4+ Legendaries</p>
-      </div>
-      <div class="product">
-        <h3>£10 Level 40 Mystery Account</h3>
-        <p>400k+ Stardust, 10+ Shinies, 10+ Legendaries</p>
-      </div>
-      <div class="product">
-        <h3>£20 Level 40+ Mystery Account</h3>
-        <p>700k+ Stardust, 20+ Shinies, 30+ Legendaries, 1+ Shiny Legendary</p>
-      </div>
-      <div class="product">
-        <h3>£40 Level 42+ Mystery Account</h3>
-        <p>3M+ Stardust, 60+ Shinies, 80+ Legendaries, 4+ Shiny Legendaries, 1+ Shundo</p>
-      </div>
-      <div class="product">
-        <h3>£70 Level 45+ Mystery Account</h3>
-        <p>5M+ Stardust, 130+ Shinies, 160+ Legendaries, 10 Shiny Legendaries, 1 Shundo Legendary/Pseudo, 5+ Shundos</p>
-      </div>
-      <div class="product">
-        <h3>£110 Level 48+ Mystery Account</h3>
-        <p>8M+ Stardust, 300+ Shinies, 230+ Legendaries, 15+ Shiny Legendaries, 2+ Shundo Legendaries/Pseudo, 8+ Shundos</p>
-      </div>
-      <div class="product">
-        <h3>£140 Level 48+ Mystery Account</h3>
-        <p>10M+ Stardust, 350+ Shinies, 300+ Legendaries, 20+ Shiny Legendaries, 2+ Shundo Legendaries, 10+ Shundos, Chance of Armoured Mewtwo</p>
-      </div>
-      <div class="product">
-        <h3>£200 Level 50 Mystery Account</h3>
-        <p>15M+ Stardust, 500+ Shinies, 400+ Legendaries, 30+ Shiny Legendaries, 3+ Shundo Legendaries, 15+ Shundos, Includes Armoured Mewtwo</p>
-      </div>
-      <div class="product">
-        <h3>£400 Level 50+ Premium Account</h3>
-        <p>100M+ XP, 1000+ Shinies, 700+ Legendaries, 40+ Shiny Legendaries, 8+ Shundo Legendaries, 20+ Shundos, Armoured Mewtwo + Apex Ho-Oh</p>
-      </div>
+      <div class="product" onclick="goToProduct('acc-5')">£5 Mystery Account - Lv30</div>
+      <div class="product" onclick="goToProduct('acc-10')">£10 Mystery Account - Lv40</div>
+      <div class="product" onclick="goToProduct('acc-20')">£20 Mystery Account - Lv40+</div>
+      <div class="product" onclick="goToProduct('acc-40')">£40 Mystery Account - Lv42+</div>
+      <div class="product" onclick="goToProduct('acc-70')">£70 Mystery Account - Lv45+</div>
+      <div class="product" onclick="goToProduct('acc-110')">£110 Mystery Account - Lv48+</div>
+      <div class="product" onclick="goToProduct('acc-140')">£140 Mystery Account - Lv48+</div>
+      <div class="product" onclick="goToProduct('acc-200')">£200 Mystery Account - Lv50</div>
+      <div class="product" onclick="goToProduct('acc-400')">£400 Ultimate Account - Lv50+</div>
     </section>
+
+    <div class="snorlax-row">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="snorlax" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="snorlax" alt="Kyogre">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="snorlax" alt="Armored Mewtwo">
+    </div>
   </div>
 
   <script>
@@ -177,6 +121,10 @@
         section.style.display = 'none';
       });
       document.getElementById(sectionId).style.display = 'block';
+    }
+
+    function goToProduct(productId) {
+      window.location.href = `products/${productId}.html`;
     }
   </script>
 </body>
