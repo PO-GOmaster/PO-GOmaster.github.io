@@ -8,7 +8,8 @@
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(to right, #1b2735, #090a0f);
+      background: url('https://assets.pokemon.com/assets/cms2/img/misc/virtual-backgrounds/masters/masters-16.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
       text-align: center;
     }
@@ -18,23 +19,20 @@
     h1 {
       font-size: 3em;
       margin-bottom: 30px;
-      color: #ffcc00;
     }
     .main-buttons button {
       font-size: 1.5em;
       padding: 20px 40px;
       margin: 10px;
-      background-color: #ffcc00;
+      background-color: rgba(255, 215, 0, 0.9);
       color: black;
       border: none;
-      border-radius: 12px;
+      border-radius: 10px;
       cursor: pointer;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-      transition: transform 0.2s, background-color 0.2s;
+      transition: transform 0.2s;
     }
     .main-buttons button:hover {
-      transform: scale(1.05);
-      background-color: #ffd633;
+      transform: scale(1.1);
     }
     section {
       display: none;
@@ -46,24 +44,21 @@
       padding: 20px;
       max-width: 600px;
       border-radius: 12px;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
     }
-    .snorlax, .coolmon {
+    .product a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .snorlax {
       width: 100px;
       height: auto;
       margin: 20px;
-      border-radius: 12px;
     }
     .snorlax-row {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-    }
-    .header-img {
-      width: 80%;
-      max-width: 600px;
-      margin: 20px auto;
-      display: block;
     }
   </style>
 </head>
@@ -71,67 +66,12 @@
   <div class="container">
     <h1>Pokémon GO Power Services</h1>
 
-    <img class="header-img" src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" alt="Groudon">
-
     <div class="snorlax-row">
       <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/025.png" class="coolmon" alt="Pikachu">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" class="coolmon" alt="Mewtwo">
       <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
     </div>
 
     <div class="main-buttons">
       <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('boosting')">Boosting</button>
-      <button onclick="showSection('accounts')">Accounts</button>
-    </div>
-
-    <section id="spoofing">
-      <h2>Spoofing Services</h2>
-      <div class="product">Spoofing Slot 1 - Teleport Access</div>
-      <div class="product">Spoofing Slot 2 - Region Exclusive Catches</div>
-    </section>
-
-    <section id="boosting">
-      <h2>Boosting Services</h2>
-      <div class="product">Boosting Slot 1 - Fast Level Ups</div>
-      <div class="product">Boosting Slot 2 - Gym Takeovers</div>
-      <div class="product">Boosting Slot 3 - Stardust Farming</div>
-      <div class="product">Boosting Slot 4 - Rare Candy Hunt</div>
-      <div class="product">Boosting Slot 5 - Buddy Level Boost</div>
-      <div class="product">Boosting Slot 6 - Team Rocket Defeats</div>
-      <div class="product">Boosting Slot 7 - Daily Tasks Complete</div>
-      <div class="product">Boosting Slot 8 - Max CP Catching</div>
-    </section>
-
-    <section id="accounts">
-      <h2>Accounts for Sale</h2>
-      <div class="product">Account Slot 1 - Level 40 + Shinies</div>
-      <div class="product">Account Slot 2 - Level 35 + Event Pokémon</div>
-      <div class="product">Account Slot 3 - Level 50 Ultra Account</div>
-      <div class="product">Account Slot 4 - Fresh Spoof Ready</div>
-      <div class="product">Account Slot 5 - Starter Bundle</div>
-      <div class="product">Account Slot 6 - PvP Ready</div>
-      <div class="product">Account Slot 7 - Legendary Collector</div>
-      <div class="product">Account Slot 8 - Maxed Gym Master</div>
-    </section>
-
-    <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/658.png" class="coolmon" alt="Greninja">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png" class="coolmon" alt="Rayquaza">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/006.png" class="coolmon" alt="Charizard">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
-    </div>
-  </div>
-
-  <script>
-    function showSection(sectionId) {
-      document.querySelectorAll('section').forEach(section => {
-        section.style.display = 'none';
-      });
-      document.getElementById(sectionId).style.display = 'block';
-    }
-  </script>
-</body>
-</html>
-
+      <button onclick="showSection
