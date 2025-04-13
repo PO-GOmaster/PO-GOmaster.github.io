@@ -2,37 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hundo Catching Service</title>
-  <link rel="stylesheet" href="../style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hundo Catches</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+    .product {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 20px;
+      display: inline-block;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: gold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Hundo Catching Service</h1>
-    <p>Get guaranteed Hundo (100 IV) Pokémon caught on your account. </p>
-    <p><strong>Price:</strong> £1.50 per Hundo — approximately $1.85</p>
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" onsubmit="generateCode()">
+  <h1>Hundo Catches</h1>
+  <div class="product">
+    <p>Price: £1.5 (~$1.88 USD)</p>
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="ilikemen6969.com@gmail.com">
-      <input type="hidden" name="item_name" value="Hundo Catching Service">
+      <input type="hidden" name="item_name" value="Hundo Catches">
+      <input type="hidden" name="amount" value="1.5">
       <input type="hidden" name="currency_code" value="GBP">
-      <input type="hidden" name="amount" value="1.50">
       <label for="quantity">Quantity:</label>
-      <input type="number" name="quantity" value="1" min="1" required>
+      <input type="number" name="quantity" value="1" min="1">
       <br><br>
-      <input type="submit" value="Buy Now with PayPal">
+      <button type="submit">Buy with PayPal</button>
     </form>
-
-    <div id="codeBox" style="margin-top: 20px;"></div>
-    <a href="../index.html">← Back to Main Page</a>
+    <p id="codeDisplay"></p>
   </div>
-
   <script>
     function generateCode() {
-      const code = Array.from({ length: 18 }, () => Math.floor(Math.random() * 10)).join('');
-      localStorage.setItem("purchaseCode", code);
+      return Math.floor(100000000000000000 + Math.random() * 900000000000000000);
     }
+    const code = generateCode();
+    document.getElementById("codeDisplay").innerText = "Your code: " + code;
   </script>
 </body>
 </html>
