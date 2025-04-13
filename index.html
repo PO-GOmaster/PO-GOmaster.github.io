@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pokémon GO Services</title>
+  <title>Pokémon GO Power Services</title>
   <style>
     body {
       margin: 0;
       font-family: 'Arial', sans-serif;
-      background: black;
+      background-color: black;
       color: white;
       text-align: center;
     }
@@ -41,13 +41,14 @@
       background: rgba(0,0,0,0.7);
       margin: 10px auto;
       padding: 20px;
-      max-width: 600px;
+      max-width: 700px;
       border-radius: 12px;
+      border: 2px solid gold;
     }
-    .snorlax, .legendary-img {
+    .snorlax, .extra-pokemon {
       width: 100px;
       height: auto;
-      margin: 20px;
+      margin: 10px;
     }
     .snorlax-row {
       display: flex;
@@ -61,64 +62,54 @@
     <h1>Pokémon GO Power Services</h1>
 
     <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="legendary-img" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="legendary-img" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="legendary-img" alt="Armored Mewtwo">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="extra-pokemon" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="extra-pokemon" alt="Kyogre">
       <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" class="extra-pokemon" alt="Armored Mewtwo">
     </div>
 
     <div class="main-buttons">
-      <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('boosting')">Boosting</button>
+      <button onclick="showSection('spoofing')">Spoofing</button>
       <button onclick="showSection('accounts')">Accounts</button>
     </div>
 
-    <section id="spoofing">
-      <h2>Spoofing Services</h2>
-      <div class="product">
-        <a href="spoofing-slot-1.html" style="color: white; text-decoration: none;">
-          <strong>Spoofing Slot 1 – Laptop Method</strong><br>
-          Learn how to spoof with a laptop! (£10 / ~$12.50)
-        </a>
-      </div>
-
-      <div class="product">
-        <a href="spoofing-slot-2.html" style="color: white; text-decoration: none;">
-          <strong>Spoofing Slot 2 – Phone Method</strong><br>
-          May take longer to download. (£15 / ~$18.75)
-        </a>
-      </div>
-    </section>
-
     <section id="boosting">
       <h2>Boosting Services</h2>
-      <div class="product">1 Million Stardust Farming – £6 (~$7.50)</div>
-      <div class="product">Shiny Catches – £1 per shiny (~$1.25)</div>
-      <div class="product">Hundo Catches – £1.50 per hundo (~$1.85)</div>
-      <div class="product">Shundo Catches – £4 per shundo (~$5.00)</div>
-      <div class="product">Shiny Legendary Trades – £10 each (~$12.50)</div>
-      <div class="product">Level 50 Legendary Trades – £8 each (~$10.00)</div>
-      <div class="product">40x Raids – £20 (~$25.00)</div>
-      <div class="product">10 Million XP + Shiny/Hundo Catches – £12 (~$15.00)</div>
+      <div class="product">1 Million Stardust Farming - £6 (~$7.50)</div>
+      <div class="product">Shiny Catches - £1 each (~$1.25)</div>
+      <div class="product">Hundo Catches - £1.50 each (~$1.90)</div>
+      <div class="product">Shundo Catches - £4 each (~$5)</div>
+      <div class="product">Shiny Legendary Trades - £10 each (~$12.50)</div>
+      <div class="product">Lvl 50 Legendary Trades - £8 each (~$10)</div>
+      <div class="product">40x Raids - £20 (~$25)</div>
+      <div class="product">10 Million XP Boost (with Shinies & Hundos) - £12 (~$15)</div>
+    </section>
+
+    <section id="spoofing">
+      <h2>Spoofing Services</h2>
+      <div class="product">Laptop Method Tutorial - £10 (~$12.50)<br />You will need a laptop.</div>
+      <div class="product">Phone Method Tutorial - £15 (~$18.80)<br />May take longer to download.</div>
     </section>
 
     <section id="accounts">
       <h2>Accounts for Sale</h2>
-      <div class="product">Account Slot 1</div>
-      <div class="product">Account Slot 2</div>
-      <div class="product">Account Slot 3</div>
-      <div class="product">Account Slot 4</div>
-      <div class="product">Account Slot 5</div>
-      <div class="product">Account Slot 6</div>
-      <div class="product">Account Slot 7</div>
-      <div class="product">Account Slot 8</div>
+      <div class="product">£5 - Level 30 Mystery Account<br />200K+ Stardust, 2+ Shinies, 4+ Legendaries (~$6.25)</div>
+      <div class="product">£10 - Level 40 Mystery Account<br />400K+ Stardust, 10+ Shinies, 10+ Legendaries (~$12.50)</div>
+      <div class="product">£20 - Level 40+ Mystery Account<br />700K+ Stardust, 20+ Shinies, 30+ Legendaries, 1+ Shiny Legendary (~$25)</div>
+      <div class="product">£40 - Level 42+ Mystery Account<br />3M+ Stardust, 60+ Shinies, 80+ Legendaries, 4+ Shiny Legendaries, 1+ Shundo (~$50)</div>
+      <div class="product">£70 - Level 45+ Mystery Account<br />5M+ Stardust, 130+ Shinies, 160+ Legendaries, 10 Shiny Legendaries, 1 Shundo Legendary/Pseudo, 5+ Shundos (~$87)</div>
+      <div class="product">£110 - Level 48+ Mystery Account<br />8M+ Stardust, 300 Shinies, 230+ Legendaries, 15+ Shiny Legendaries, 2+ Shundo Legendary/Pseudo, 8+ Shundos (~$137)</div>
+      <div class="product">£140 - Level 48+ Mystery Account<br />10M+ Stardust, 350+ Shinies, 300+ Legendaries, 20+ Shiny Legendaries, 2+ Shundo Legendaries, 10+ Shundos, Chance for Armored Mewtwo (~$175)</div>
+      <div class="product">£200 - Level 50 Mystery Account<br />15M+ Stardust, 500+ Shinies, 400+ Legendaries, 30+ Shiny Legendaries, 3+ Shundo Legendaries, 15+ Shundos, Includes Armored Mewtwo (~$250)</div>
+      <div class="product">£400 - Level 50+ Endgame Account<br />100M+ XP, 1000+ Shinies, 700+ Legendaries, 40+ Shiny Legendaries, 8+ Shundo Legendaries, 20+ Shundos, Includes Armored Mewtwo & Apex Ho-Oh (~$500)</div>
     </section>
 
     <div class="snorlax-row">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="legendary-img" alt="Groudon">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="legendary-img" alt="Kyogre">
-      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150_f2.png" class="legendary-img" alt="Armored Mewtwo">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/383.png" class="extra-pokemon" alt="Groudon">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/382.png" class="extra-pokemon" alt="Kyogre">
       <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/143.png" class="snorlax" alt="Snorlax">
+      <img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/150.png" class="extra-pokemon" alt="Armored Mewtwo">
     </div>
   </div>
 
